@@ -1,26 +1,30 @@
-import { useState } from 'react'
+import Nav from './components/Nav'
+import Hero from './components/Hero'
+import Features from './components/Features'
+import TryOn from './components/TryOn'
+import Social from './components/Social'
+import Gallery from './components/Gallery'
+import CTA from './components/CTA'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-neutral-950">
+      <Nav />
+      <Hero />
+      <Features />
+      <TryOn />
+      <Social />
+      <Gallery />
+      <CTA />
+      <footer className="py-12 border-t border-white/10 bg-neutral-950/80 text-white/60">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <img src="/favicon.svg" alt="Pylex" className="h-6 w-6" />
+            <span className="text-white/80 font-medium">Pylex</span>
+          </div>
+          <p className="text-sm">Crafted for modern wardrobes. © {new Date().getFullYear()}</p>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }
